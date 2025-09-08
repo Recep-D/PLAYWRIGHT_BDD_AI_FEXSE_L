@@ -47,6 +47,19 @@ This contains framework infrastructure code.
 - PlaywrightManager: Manages Playwright lifecycle with ThreadLocal, ensuring thread safety for parallel execution.
 - Hooks: Uses @Before and @After to start and close the browser cleanly for each scenario.
 
+Allure + Playwright Trace Reporting
+-----------------------------------
+
+Run tests:
+- mvn test
+
+Serve Allure report (auto-opens in browser):
+- mvn allure:serve
+
+Alternatively, generate static report and open:
+- mvn allure:report
+- open target/site/allure-maven-plugin/index.html
+
 # Test Runner: Entry point for running tests.
 src/test/java/com/yourcompany/runners/*.java ->
 This is a JUnit/Cucumber test runner. Contains only @CucumberOptions for configuration.

@@ -10,6 +10,7 @@ public class HomeStepDefinitions {
     
     private HomePage homePage;
     
+    
     @Given("I am on the Fexse Home page")
     public void i_am_on_the_fexse_home_page() {
         homePage = new HomePage();

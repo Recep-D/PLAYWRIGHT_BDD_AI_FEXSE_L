@@ -4,14 +4,14 @@ package com.ıaCreation.pages;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
-import com.ıaCreation.utilities.Driver;
+import com.ıaCreation.utilities.BrowserFactory;
 
 public class HomePage {
 
     private Page page;
     // Constructor
     public HomePage() {
-        this.page = Driver.getPage();
+        this.page = BrowserFactory.getPage();
     }
 
     // Locators - Following ReadMe.txt priority: getByTestId > getByRole > getById > CSS
@@ -39,7 +39,7 @@ public class HomePage {
     
     // Page Actions
     public void navigateToHomePage() {
-        Driver.navigateToUrl();
+        BrowserFactory.navigateToUrl();
     }
     
     public void clickHomeModule() {
@@ -170,10 +170,10 @@ public class HomePage {
     }
     
     public String getPageTitle() {
-        return Driver.getTitle();
+        return BrowserFactory.getTitle();
     }
     
     public String getCurrentUrl() {
-        return Driver.getCurrentUrl();
+        return BrowserFactory.getCurrentUrl();
     }
 }

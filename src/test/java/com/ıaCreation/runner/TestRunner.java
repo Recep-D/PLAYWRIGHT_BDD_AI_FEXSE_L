@@ -12,7 +12,7 @@ import static io.cucumber.junit.platform.engine.Constants.FEATURES_PROPERTY_NAME
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty,html:target/cucumber-reports/html-report,json:target/cucumber-reports/json/Cucumber.json,junit:target/cucumber-reports/junit/Cucumber.xml")
+@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty,html:target/cucumber-reports/html-report,json:target/cucumber-reports/json/Cucumber.json,junit:target/cucumber-reports/junit/Cucumber.xml,io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.ıaCreation.step_definitions,com.ıaCreation.hooks")
 @ConfigurationParameter(key = FEATURES_PROPERTY_NAME, value = "src/test/resources/features")
 public class TestRunner {
