@@ -13,3 +13,15 @@ Feature: User will examine the Home page
     And I scroll down to the "EU Integration" section
     And I click on "EU Integration"
     Then I should see the EU Integration details displayed
+   @vip
+  Scenario: Open first asset in "Watches" and verify Swiss Watch Passport document
+    Given I am on the Fexse Home page
+    When I navigate to the "Marketplace" section
+    And I filter by category "Art"
+    Then I should see a loading skeleton that disappears
+    And I should see at least 1 assets in the grid
+    When I open the first asset in the grid
+    Then I should be on the Asset Details page
+    When I switch to the "Documents" tab
+    Then I should see a document named "Swiss Watch Passport"
+    And the document should be downloadable or open in a new tab successfully

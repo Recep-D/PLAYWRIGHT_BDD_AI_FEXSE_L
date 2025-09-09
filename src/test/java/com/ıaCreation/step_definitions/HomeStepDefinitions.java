@@ -63,4 +63,49 @@ public class HomeStepDefinitions {
             throw new AssertionError("EU Integration details are not displayed");
         }
     }
+    
+    @When("I navigate to the {string} section")
+    public void i_navigate_to_the_section(String sectionName) {
+        homePage.navigateToSection(sectionName);
+    }
+    
+    @And("I filter by category {string}")
+    public void i_filter_by_category(String category) {
+        homePage.filterByCategory(category);
+    }
+    
+    @Then("I should see a loading skeleton that disappears")
+    public void i_should_see_a_loading_skeleton_that_disappears() {
+        homePage.waitForLoadingSkeletonToDisappear();
+    }
+    
+    @And("I should see at least {int} assets in the grid")
+    public void i_should_see_at_least_assets_in_the_grid(int minCount) {
+        homePage.verifyAssetsInGrid(minCount);
+    }
+    
+    @When("I open the first asset in the grid")
+    public void i_open_the_first_asset_in_the_grid() {
+        homePage.openFirstAssetInGrid();
+    }
+    
+    @Then("I should be on the Asset Details page")
+    public void i_should_be_on_the_asset_details_page() {
+        homePage.verifyAssetDetailsPage();
+    }
+    
+    @When("I switch to the {string} tab")
+    public void i_switch_to_the_tab(String tabName) {
+        homePage.switchToTab(tabName);
+    }
+    
+    @Then("I should see a document named {string}")
+    public void i_should_see_a_document_named(String documentName) {
+        homePage.verifyDocumentExists(documentName);
+    }
+    
+    @And("the document should be downloadable or open in a new tab successfully")
+    public void the_document_should_be_downloadable_or_open_in_a_new_tab_successfully() {
+        homePage.verifyDocumentDownloadable();
+    }
 }
