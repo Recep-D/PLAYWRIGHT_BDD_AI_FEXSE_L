@@ -13,7 +13,7 @@ Feature: User will examine the Home page
     And I scroll down to the "EU Integration" section
     And I click on "EU Integration"
     Then I should see the EU Integration details displayed
-   @vip
+   @wip
   Scenario: Open first asset in "Watches" and verify Swiss Watch Passport document
     Given I am on the Fexse Home page
     When I navigate to the "Marketplace" section
@@ -25,3 +25,4 @@ Feature: User will examine the Home page
     When I switch to the "Documents" tab
     Then I should see a document named "Swiss Watch Passport"
     And the document should be downloadable or open in a new tab successfully
+
