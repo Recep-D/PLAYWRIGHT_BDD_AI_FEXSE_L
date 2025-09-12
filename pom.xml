@@ -103,10 +103,9 @@
                 <version>${maven.surefire.version}</version>
                 <configuration>
                     <includes>
-                        <include>**/*Test.java</include>
-                        <include>**/*Tests.java</include>
-                        <include>**/*TestRunner.java</include>
+                        <include>**/TestRunner.java</include>
                     </includes>
+
                     <properties>
                         <configurationParameters>
                             cucumber.junit-platform.naming-strategy=long
@@ -132,9 +131,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <source>21</source>
-                    <target>21</target>
+                     <release>21</release>
                 </configuration>
+
             </plugin>
         </plugins>
     </build>
